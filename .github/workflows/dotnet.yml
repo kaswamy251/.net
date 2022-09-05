@@ -14,9 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: Azure-Samples/app-service-web-dotnet-get-started@master
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 4.8.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
