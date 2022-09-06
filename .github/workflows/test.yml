@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    - name: Setup Automation Testing
+      uses: dassusovan/automation-testing-action@v1
+      
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
@@ -23,7 +27,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      
-    - name: Setup Automation Testing
-      uses: dassusovan/automation-testing-action@v1
+    
 
